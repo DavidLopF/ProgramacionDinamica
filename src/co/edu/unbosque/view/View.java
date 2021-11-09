@@ -38,7 +38,8 @@ public class View {
 	    }
 
 	    public String menuPrincipal() {
-	        Object[] opciones = {"1. Grafo dirigido.", "2. Grafo no dirigido", "Salir"};
+	        Object[] opciones = {"1. Algoritmo de floyd.", "2. Problema del viajero","3. Multipicacion de matrices"
+	        		,"4. Problema de asignación de tareas", "5. Coeficiente binomiales", "6. Salir"};
 	        Object opcion = JOptionPane.showInputDialog(null, "      ..:Bienvenido señor usuario :..                " + "\n\n\nSelecciona un operacion a realizar:    ", "Elegir",
 	                JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
 	        if (opcion == null) {

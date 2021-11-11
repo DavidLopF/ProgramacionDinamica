@@ -51,6 +51,18 @@ public class Controller {
 			viajero = new Viajero();
 			vista.mostrarMensaje("Matriz de adyacencia:\n" + viajero.mostrarMatriz(viajero.getCaminos())
 					+ "\nmatriz de pesos:\n" + viajero.mostrarMatriz(viajero.getPesos()));
+
+			int inicio = vista.capturarInt("Ingrese tamaño: ");
+
+			while (inicio > 4 || inicio < 0) {
+				vista.mostrarMensaje("inicio fuera de rango ");
+				inicio = vista.capturarInt("Ingrese tamaño: ");
+			}
+
+			
+
+			vista.mostrarMensaje("Peso minimo :\n" + viajero.travellingProblem(viajero.getPesos(), inicio));
+
 			funcionar();
 			break;
 		case "3. Multipicacion de matrices":
@@ -85,9 +97,8 @@ public class Controller {
 				sol += Arrays.toString(c1[i]) + "\n";
 				sol += asignacionTarea.maxProfit(c1) + "\n";
 			}
-			
+
 			vista.mostrarMensaje("resultado\n " + sol);
-	
 
 			funcionar();
 			break;
